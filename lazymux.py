@@ -26,7 +26,8 @@ def main():
 	print("   [17] Malware Analysis")
 	print("   [18] Compiler/Interpreter")
 	print("   [19] Social Engineering Tools")
-	print("\n   [00] Exit the Lazymux\n")
+	print("\n   [99] Update the Lazymux")
+	print("   [00] Exit the Lazymux\n")
 	lazymux = input("lzmx > set_install ")
 
 	# 01 - Information Gathering
@@ -169,6 +170,7 @@ def main():
 		print("    [24] XPL-SEARCH: Search exploits in multiple exploit databases")
 		print("    [25] AndroBugs_Framework: An efficient Android vulnerability scanner that helps developers or hackers find potential security vulnerabilities in Android applications")
 		print("    [26] Clickjacking-Tester: A python script designed to check if the website if vulnerable of clickjacking and create a poc")
+		print("    [27] Sn1per: Attack Surface Management Platform | Sn1perSecurity LLC")
 		print("\n    [00] Back to main menu\n")
 		vulnsys = input("lzmx > set_install ")
 		if vulnsys == "@":
@@ -206,6 +208,7 @@ def main():
 			elif vulnsys.strip() == "24": xplsearch()
 			elif vulnsys.strip() == "25": androbugs()
 			elif vulnsys.strip() == "26": clickjacking()
+			elif vulnsys.strip() == "27": sn1per()
 			elif vulnsys.strip() == "00" or vulnsys.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -239,6 +242,12 @@ def main():
 		print("    [24] CMSeeK: CMS Detection and Exploitation suite - Scan WordPress, Joomla, Drupal and over 180 other CMSs")
 		print("    [25] CMSmap: A python open source CMS scanner that automates the process of detecting security flaws of the most popular CMSs")
 		print("    [26] CrawlBox: Easy way to brute-force web directory")
+		print("    [27] LFISuite: Totally Automatic LFI Exploiter (+ Reverse Shell) and Scanner")
+		print("    [28] Parsero: Robots.txt audit tool")
+		print("    [29] Sn1per: Attack Surface Management Platform | Sn1perSecurity LLC")
+		print("    [30] Sublist3r: Fast subdomains enumeration tool for penetration testers")
+		print("    [31] WP-plugin-scanner: A tool to list plugins installed on a wordpress powered website")
+		print("    [32] WhatWeb: Next generation web scanner")
 		print("\n    [00] Back to main menu\n")
 		webhack = input("lzmx > set_install ")
 		if webhack == "@":
@@ -276,6 +285,12 @@ def main():
 			elif webhx.strip() == "24": cmseek()
 			elif webhx.strip() == "25": cmsmap()
 			elif webhx.strip() == "26": crawlbox()
+			elif webhx.strip() == "27": lfisuite()
+			elif webhx.strip() == "28": parsero()
+			elif webhx.strip() == "29": sn1per()
+			elif webhx.strip() == "30": sublist3r()
+			elif webhx.strip() == "31": wppluginscanner()
+			elif webhx.strip() == "32": whatweb()
 			elif webhx.strip() == "00" or webhx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -336,6 +351,9 @@ def main():
 		print("    [23] BruteX: Automatically brute force all services running on a target")
 		print("    [24] Gemail-Hack: python script for Hack gmail account brute force")
 		print("    [25] GoblinWordGenerator: Python wordlist generator")
+		print("    [26] PyBozoCrack: A silly & effective MD5 cracker in Python")
+		print("    [27] brutespray: Brute-Forcing from Nmap output - Automatically attempts default creds on found services")
+		print("    [28] crowbar: Crowbar is brute forcing tool that can be used during penetration tests")
 		print("\n    [00] Back to main menu\n")
 		passtak = input("lzmx > set_install ")
 		if passtak == "@":
@@ -372,6 +390,9 @@ def main():
 			elif passx.strip() == "23": brutex()
 			elif passx.strip() == "24": gemailhack()
 			elif passx.strip() == "25": goblinwordgenerator()
+			elif passx.strip() == "26": pybozocrack()
+			elif passx.strip() == "27": brutespray()
+			elif passx.strip() == "28": crowbar()
 			elif passx.strip() == "00" or passx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -383,6 +404,8 @@ def main():
 		print("    [02] Wifite: An automated wireless attack tool")
 		print("    [03] Wifiphisher: The Rogue Access Point Framework")
 		print("    [04] Routersploit: Exploitation Framework for Embedded Devices")
+		print("    [05] PwnSTAR: (Pwn SofT-Ap scRipt) - for all your fake-AP needs!")
+		print("    [06] Pyrit: The famous WPA precomputed cracker, Migrated from Google")
 		print("\n    [00] Back to main menu\n")
 		wiretak = input("lzmx > set_install ")
 		if wiretak == "@":
@@ -398,6 +421,8 @@ def main():
 			elif wirex.strip() == "02" or wirex.strip() == "2": wifite()
 			elif wirex.strip() == "03" or wirex.strip() == "3": wifiphisher()
 			elif wirex.strip() == "04" or wirex.strip() == "4": routersploit()
+			elif wirex.strip() == "05" or wirex.strip() == "5": pwnstar()
+			elif wirex.strip() == "06" or wirex.strip() == "6": pyrit()
 			elif wirex.strip() == "00" or wirex.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -414,6 +439,10 @@ def main():
 		print("    [07] UPX: Ultimate Packer for eXecutables")
 		print("    [08] pyinstxtractor: PyInstaller Extractor")
 		print("    [09] innoextract: A tool to unpack installers created by Inno Setup")
+		print("    [10] pycdc: C++ python bytecode disassembler and decompiler")
+		print("    [11] APKiD: Android Application Identifier for Packers, Protectors, Obfuscators and Oddities - PEiD for Android")
+		print("    [12] DTL-X: Python APK Reverser & Patcher Tool")
+		print("    [13] APKLeaks: Scanning APK file for URIs, endpoints & secrets")
 		print("\n    [00] Back to main menu\n")
 		reversi = input("lzmx > set_install ")
 		if reversi == "@":
@@ -434,6 +463,10 @@ def main():
 			elif revex.strip() == "07" or revex.strip() == "7": upx()
 			elif revex.strip() == "08" or revex.strip() == "8": pyinstxtractor()
 			elif revex.strip() == "09" or revex.strip() == "9": innoextract()
+			elif revex.strip() == "10": pycdc()
+			elif revex.strip() == "11": apkid()
+			elif revex.strip() == "12": dtlx()
+			elif revex.strip() == "13": apkleaks()
 			elif revex.strip() == "00" or revex.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -451,6 +484,8 @@ def main():
 		print("    [08] Routersploit: Exploitation Framework for Embedded Devices")
 		print("    [09] A-Rat: Remote Administration Tool")
 		print("    [10] BAF: Blind Attacking Framework")
+		print("    [11] Gloom-Framework: Linux Penetration Testing Framework")
+		print("    [12] Zerodoor: A script written lazily for generating cross-platform  backdoors on the go :)")
 		print("\n    [00] Back to main menu\n")
 		exploitool = input("lzmx > set_install ")
 		if exploitool == "@":
@@ -472,6 +507,8 @@ def main():
 			elif explx.strip() == "08" or explx.strip() == "8": routersploit()
 			elif explx.strip() == "09" or explx.strip() == "9": arat()
 			elif explx.strip() == "10": baf()
+			elif explx.strip() == "11": gloomframework()
+			elif explx.strip() == "12": zerodoor()
 			elif explx.strip() == "00" or explx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -601,11 +638,16 @@ def main():
 	
 	# 13 - Install Linux Distro
 	elif lazymux.strip() == "13":
-		print("\n    [01] Ubuntu")
+		print("\n    [01] Ubuntu (impish)")
 		print("    [02] Fedora")
 		print("    [03] Kali Nethunter")
 		print("    [04] Parrot")
 		print("    [05] Arch Linux")
+		print("    [06] Alpine Linux (edge)")
+		print("    [07] Debian (bullseye)")
+		print("    [08] Manjaro AArch64")
+		print("    [09] OpenSUSE (Tumbleweed)")
+		print("    [10] Void Linux")
 		print("\n    [00] Back to main menu\n")
 		innudis = input("lzmx > set_install ")
 		if innudis == "@":
@@ -622,6 +664,11 @@ def main():
 			elif innux.strip() == "03" or innux.strip() == "3": nethunter()
 			elif innux.strip() == "04" or innux.strip() == "4": parrot()
 			elif innux.strip() == "05" or innux.strip() == "5": archlinux()
+			elif innux.strip() == "06" or innux.strip() == "6": alpine()
+			elif innux.strip() == "07" or innux.strip() == "7": debian()
+			elif innux.strip() == "08" or innux.strip() == "8": manjaroArm64()
+			elif innux.strip() == "09" or innux.strip() == "9": opensuse()
+			elif innux.strip() == "10": voidLinux()
 			elif innux.strip() == "00" or innux.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -850,6 +897,7 @@ def main():
 		print("    [06] F4K3: Fake User Data Generator")
 		print("    [07] Hac")
 		print("    [08] Cookie-stealer: Crappy cookie stealer")
+		print("    [09] zphisher: Automated Phishing Tool")
 		print("\n    [00] Back to main menu\n")
 		soceng = input("lzmx > set_install ")
 		if soceng == "@":
@@ -869,10 +917,13 @@ def main():
 			elif socng.strip() == "06" or socng.strip() == "6": f4k3()
 			elif socng.strip() == "07" or socng.strip() == "7": hac()
 			elif socng.strip() == "08" or socng.strip() == "8": cookiestealer()
+			elif socng.strip() == "09" or socng.strip() == "9": zphisher()
 			elif socng.strip() == "00" or socng.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
+	elif lazymux.strip() == "99":
+		os.system("git pull")
 	elif lazymux.strip() == "00":
 		sys.exit()
 	

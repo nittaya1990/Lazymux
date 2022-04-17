@@ -73,7 +73,7 @@ def backtomenu_option():
 		
 		if backtomenu == "99":
 			restart_program()
-		elif backtomenu == "00":
+		elif backtomenu == "0" or backtomenu == "00":
 			sys.exit()
 		else:
 			print("\nERROR: Wrong Input")
@@ -382,7 +382,8 @@ def planetwork_ddos():
 def hydra():
 	print('\n###### Installing Hydra')
 	os.system('apt update -y && apt upgrade -y')
-	os.system('apt install hydra')
+	os.system('')
+	os.system('git clone https://github.com/vanhauser-thc/thc-hydra')
 	print('###### Done')
 	backtomenu_option()
 
@@ -597,6 +598,7 @@ def sudo():
 	backtomenu_option()
 
 def ubuntu():
+	"""
 	print('\n###### Installing Ubuntu')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
@@ -604,13 +606,28 @@ def ubuntu():
 	os.system('mv termux-ubuntu {0} && cd {0}/termux-ubuntu && bash ubuntu.sh'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
+	"""
+	print('\n###### Installing Ubuntu')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install proot-distro')
+	os.system('proot-distro install ubuntu')
+	print('###### Done')
+	backtomenu_option()
 
 def fedora():
+	"""
 	print('\n###### Installing Fedora')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install wget git')
 	os.system('wget https://raw.githubusercontent.com/nmilosev/termux-fedora/master/termux-fedora.sh')
 	os.system('mv termux-fedora.sh {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+	"""
+	print('\n###### Installing Ubuntu')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install proot-distro')
+	os.system('proot-distro install fedora')
 	print('###### Done')
 	backtomenu_option()
 
@@ -1065,7 +1082,7 @@ def jadx():
 	print("###### Type 'jadx' to start.")
 	backtomenu_option()
 
-def pwnedornot():
+def pwnedOrNot():
 	print('\n###### Installing pwnedOrNot')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python')
@@ -1255,12 +1272,21 @@ def parrot():
 	backtomenu_option()
 
 def archlinux():
+	"""
 	print('\n###### Installing Arch Linux')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git')
 	os.system('cd $HOME && git clone https://github.com/sdrausty/TermuxArch')
 	os.system('cd $HOME && bash TermuxArch/setupTermuxArch.sh')
 	print('###### Done')
+	backtomenu_option()
+	"""
+	print('\n###### Installing Arch Linux')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install proot-distro')
+	os.system('proot-distro install archlinux')
+	print('###### Done')
+	print("###### Type 'proot-distro login archlinux' to start.")
 	backtomenu_option()
 
 def tshark():
@@ -1916,6 +1942,191 @@ def leaked():
 	os.system('git clone https://github.com/GitHackTools/Leaked')
 	os.system('mv Leaked {}'.format(homeDir))
 	print('###### Done')
+	backtomenu_option()
+
+def gloomframework():
+	print('\n###### Installing Gloom-Framework')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git nmap python -y')
+	os.system('python -m pip install mechanize pythonwhois')
+	os.system('git clone https://github.com/StreetSec/Gloom-Framework')
+	os.system('mv Gloom-Framework {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def lfisuite():
+	print('\n###### Installing LFISuite')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/D35m0nd142/LFISuite')
+	os.system('mv LFISuite {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def parsero():
+	print('\n###### Installing Parsero')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/behindthefirewalls/Parsero')
+	os.system('mv Parsero {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def pwnstar():
+	print('\n###### Installing PwnSTAR')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/SilverFoxx/PwnSTAR')
+	os.system('mv PwnSTAR {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def pybozocrack():
+	print('\n###### Installing PyBozoCrack')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('python -m pip install wheel==0.22.0')
+	os.system('git clone https://github.com/ikkebr/PyBozoCrack')
+	os.system('mv PyBozoCrack {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def pyrit():
+	print('\n###### Installing Pyrit')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('python2 -m pip install httplib2==0.10.3 colorlog==2.10.0 beautifulsoup4==4.5.3 protobuf==3.2.0rc2 requests==2.11.1 google==1.9.3')
+	os.system('git clone https://github.com/JPaulMora/Pyrit')
+	os.system('mv Pyrit {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def sn1per():
+	print('\n###### Installing Sn1per')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('git clone https://github.com/1N3/Sn1per')
+	os.chdir("Sn1per")
+	os.system("bash install.sh")
+	os.chdir("..")
+	os.system('mv Sn1per {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def sublist3r():
+	print('\n###### Installing Sublist3r')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('python -m pip install argparse dnspython requests')
+	os.system('git clone https://github.com/aboul3la/Sublist3r')
+	os.system('mv Sublist3r {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def wppluginscanner():
+	print('\n###### Installing WP-plugin-scanner')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/mintobit/WP-plugin-scanner')
+	os.system('mv WP-plugin-scanner {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def whatweb():
+	print('\n###### Installing WhatWeb')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('git clone https://github.com/urbanadventurer/WhatWeb')
+	os.system('mv WhatWeb {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def zerodoor():
+	print('\n###### Installing Zerodoor')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git gcc nmap-ncat python2 -y')
+	os.system('git clone https://github.com/Souhardya/Zerodoor')
+	os.system('mv Zerodoor {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def brutespray():
+	print('\n###### Installing brutespray')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('python -m pip install argcomplete==1.10.0')
+	os.system('git clone https://github.com/x90skysn3k/brutespray')
+	os.system('mv brutespray {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+
+def pycdc():
+	print('\n###### Installing pycdc')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python clang cmake make -y')
+	os.system('git clone https://github.com/zrax/pycdc')
+	os.system('mv pycdc {}'.format(homeDir))
+	os.chdir(homeDir)
+	os.chdir("pycdc")
+	os.system('cmake .')
+	os.system('make')
+	os.system('make check')
+	os.chdir(current_dir)
+	print('###### Done')
+	backtomenu_option()
+
+def apkid():
+	print('\n###### Installing APKiD')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python yara yara-static -y')
+	os.system('python -m pip install apkid')
+	print('###### Done')
+	print("###### Type 'apkid' to start.")
+	backtomenu_option()
+
+def dtlx():
+	print('\n###### Installing DTL-X')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python git apktool apksigner openjdk-17 -y')
+	os.system('python -m pip install loguru')
+	os.system('git clone https://github.com/Gameye98/DTL-X')
+	os.system('mv DTL-X {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def crowbar():
+	print('\n###### Installing crowbar')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('python -m pip install paramiko==2.7.1')
+	os.system('git clone https://github.com/galkan/crowbar')
+	os.system('mv crowbar {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def voidLinux():
+	print('\n###### Installing Void Linux')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install proot-distro')
+	os.system('proot-distro install void')
+	print("###### Type 'proot-distro login void' to start.")
+	print('###### Done')
+	backtomenu_option()
+
+def apkleaks():
+	print('\n###### Installing APKLeaks')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python -y')
+	if not os.path.isfile(os.getenv("PREFIX")+"/bin/jadx"):
+		os.system('apt install dpkg wget -y')
+		os.system('wget https://github.com/Lexiie/Termux-Jadx/blob/master/jadx-0.6.1_all.deb?raw=true')
+		os.system('dpkg -i jadx-0.6.1_all.deb?raw=true')
+		os.system('rm -rf jadx-0.6.1_all.deb?raw=true')
+	os.system('python -m pip install apkleaks')
+	print('###### Done')
+	print("###### Type 'apkleaks' to start.")
+	print("###### Usage: apkleaks -f /path/file.apk")
 	backtomenu_option()
 
 ### Compiler/Interpreter
